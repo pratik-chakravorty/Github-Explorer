@@ -1,0 +1,368 @@
+
+body {
+  margin:0;
+  padding:0;
+  background:#FAF9FB;
+  background-color: #faf9fb;
+  font-family:'Work Sans',sans-serif;
+background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c5c2ca' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+a {
+    color:#000;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 1.5s ease-in;
+}
+
+
+img {
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  border:2px solid #000;
+}
+
+/* Spinner */
+/* Spinner */
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color:#FFFF82;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+
+
+.nav {
+  background:#FFFF82;
+  border:2px solid #000;
+ 
+}
+
+.container {
+  max-width:1200px;
+  margin:0 auto;
+  
+}
+
+.nav-items{
+  display:flex;
+  align-items:center;
+}
+
+.nav-items .logo{
+  margin-right:auto;
+  font-weight:400;
+}
+.left-nav-link {
+    margin-right:40px;
+    font-weight:400;
+}
+
+.mid-nav-link {
+  margin-right:40px;
+ font-weight:400;
+}
+
+.right-nav-link {
+    font-weight:400;
+}
+
+
+.home-section {
+  height:50vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.heading {
+  font-size:50px;
+  font-weight:100;
+  letter-spacing: 15px;
+}
+
+.btn-primary {
+  background:#FFFF82;
+  border:2px solid #000;
+  padding:10px 30px;
+  font-size:25px;
+
+}
+
+.first {
+  margin-right:20px;
+}
+.second {
+  margin-right:20px;
+}
+
+/* User Component */
+.center {
+  text-align:center;
+}
+
+form {
+  width:100%;
+  /* background:red; */
+  text-align:center;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+.input {
+  width:35%;
+  padding:19px;
+  font-size:18px;
+  font-family: 'Open Sans',sans-serif;
+  outline:none;
+  background:#fff;
+  color:rgb(46, 46, 46);
+  border:2px solid #000;
+  margin-right:40px;
+}
+
+::placeholder {
+  font-family: 'Open Sans',sans-serif;
+  font-weight:100;  
+  font-size:20px;
+  color:rgb(88, 88, 88);
+}
+
+
+.show-user-container {
+  margin:45px auto;
+  display:grid;
+  width:70%;
+  grid-template-columns: 200px 1fr;
+  grid-gap:25px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border:2px solid #000;
+  padding:20px;
+  color:rgb(56, 56, 56);
+}
+
+.error {
+  text-align:center;
+  border:2px solid #000;
+  margin:30px auto;
+  background:rgb(255, 97, 97);
+  font-size:24px;
+  padding:20px 45px;
+  width:75%;
+}
+
+
+
+/* Animating  */
+
+.show-appear {
+  opacity:0;
+  transform:translateX(-120%);
+}
+
+.show-appear.show-appear-active {
+  opacity: 1;
+  transform:translateX(0);
+  transition:all 0.5s;
+}
+
+.error-appear {
+  opacity:0;
+  transform:translateY(120%)
+}
+
+.error-appear.error-appear-active {
+  transform:translateX(0);
+  opacity: 1;
+  transition:all 0.5s ease-in;
+}
+
+/* Repo Component */
+
+.show-repo-container {
+  margin:45px auto;
+  display:grid;
+  width:70%;
+  background: #fff;
+  border:2px solid #000;
+  padding:5px;
+  color:rgb(56, 56, 56);
+}
+
+.stats-content {
+ display:flex;
+ justify-content: space-around;
+font-size:30px;
+}
+
+.paragraph {
+  font-size:35px;
+  font-weight:100;
+}
+
+/* Trending Component */
+
+.show-trending-container {
+  display:grid;
+  grid-template-columns: repeat(2,500px);
+  justify-content: center;
+  margin-top:40px;
+  grid-gap:20px;
+  
+
+}
+
+.trending-item {
+  font-size:20px;
+  line-height: 2rem;
+  font-weight:100;
+  background:#fff;
+  border:2px solid #000;
+  padding:20px;
+  color:rgb(56, 56, 56);
+  animation: slideIn 0.5s;
+  
+}
+
+@keyframes slideIn {
+  0% {
+    transform:translateX(-120%);
+    opacity:0
+  }
+  60% {
+    opacity:1
+  }
+  100% {
+    transform:translateX(0);
+    opacity:1
+  }
+}
+
+.trending-heading {
+  font-size:30px;
+  font-weight:bold;
+  display:flex;
+  justify-content: center;
+}
+
+.intro-heading {
+  display:flex;
+  justify-content: space-around;
+}
+
+.heading-3 {
+  font-weight:500;
+}
+
+.trending-paragraph {
+  text-align:center;
+}
+
+.trending-appear {
+  opacity:0;
+  transform:translateX(-120%);
+}
+
+.trending-appear.trending-appear-active {
+  transform:translateX(0);
+  opacity: 1;
+  transition:all 0.5s;
+
+}
+
+.some-div {
+  height:auto;
+}
+
+
+
+/* Responsive */
+@media(max-width:1000px) {
+  .show-trending-container {
+    display:grid;
+    grid-template-columns:1fr;
+    justify-content: center;
+    margin-top:40px;    
+  
+  }
+
+  .stats-content {
+    display:flex;
+    justify-content: space-around;
+   font-size:15px;
+   }
+   
+   .paragraph {
+     font-size:15px;
+     font-weight:100;
+   }
+
+   .heading {
+     font-size:30px;
+     letter-spacing: 0px;
+   }
+
+   ::placeholder {
+     font-size:15px;
+   }
+
+}
+
+@media(max-width:678px) {
+  .nav-items {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:10px;
+  
+  }
+  .nav-items .logo {
+    margin:0;
+    text-align:center;
+  }
+  .left-nav-link , .mid-nav-link , .right-nav-link {
+    text-align: center;
+    margin:0;
+    padding:10px;
+  }
+}
