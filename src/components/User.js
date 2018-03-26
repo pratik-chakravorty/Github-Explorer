@@ -8,7 +8,9 @@ function ShowUser(props) {
     const { userData } = props;
     return (
         <div className="show-user-container">
-            <img src={userData.avatar_url} alt="avatar" />
+            <div className="image-avatar">
+                <img src={userData.avatar_url} alt="avatar" />
+            </div>
             <div className="intro-content">
                 <a href={userData.html_url} target="_blank"><h2>{userData.name}</h2></a>
                 <h4>Followers: {userData.followers}</h4>

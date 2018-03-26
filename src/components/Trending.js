@@ -7,10 +7,12 @@ function ShowTrending(props) {
     return (
 
         <div className="show-trending-container">
+
             {trendingData.map((item, index) => {
                 return (
 
                     <div key={index} className="trending-item">
+
                         <a href={item.html_url} className="trending-heading center">{item.name}</a>
                         <div className="intro-heading">
                             <h3 className="heading-3">Stars: {item.stargazers_count}</h3>
@@ -18,10 +20,10 @@ function ShowTrending(props) {
                         </div>
                         <p className="trending-paragraph">{item.description}</p>
                     </div>
+
                 )
             })}
         </div>
-
     )
 }
 

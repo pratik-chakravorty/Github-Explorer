@@ -55,7 +55,7 @@ class Repo extends Component {
         return (
             <div className="repos-container">
                 <h1 className="heading center">Github Explorer</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="form">
                     <input required className="input" type="text" ref={(input) => this.getInput = input} placeholder="Enter Repository Name" />
                     <button className="btn-primary">Search</button>
                 </form>
